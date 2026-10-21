@@ -1,0 +1,19 @@
+@'
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+'@ | Set-Content .gitignore
+backend/.env
+backend/node_modules/
+frontend/node_modules/
+frontend/dist/
+piper-voice/
