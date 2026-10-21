@@ -25,7 +25,9 @@ import remarkGfm from "remark-gfm";
 
 import { motion } from "framer-motion";
 import "./App.css";
-
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:3001"
+).replace(/\/$/, "");
 const projects = [
   {
     number: "01",
@@ -299,7 +301,7 @@ function speakJarvis(text) {
 
       try {
         const response = await fetch(
-          "http://localhost:3001/api/chat",
+          `${API_BASE_URL}/api/chat`,
           {
             method: "POST",
             headers: {
@@ -504,7 +506,7 @@ function speakJarvis(text) {
 
     try {
       const response = await fetch(
-        "http://localhost:3001/api/chat",
+       `${API_BASE_URL}/api/chat`,
         {
           method: "POST",
           headers: {
